@@ -575,6 +575,6 @@
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
-	<string>brianschiller.com/clipbox</string>
+	<string>https://github.com/bgschiller/alfred-clipbox</string>
 </dict>
 </plist>
