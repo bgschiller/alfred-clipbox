@@ -121,4 +121,4 @@ if __name__ == '__main__':
         except requests.HTTPError:
             print("hmm, that token didn't work")
     else:
-        print(sss.store_screenshot(file_name))
+        sys.stdout.write(sss.store_screenshot(file_name)) # no newline on the end
