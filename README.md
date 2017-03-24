@@ -14,7 +14,7 @@ Take screenshots and video capture and upload to Trello. Put the link on your cl
 
 Run the `clipbox login` action to get an authorization token from clipbox:
 
-![](https://trello-attachments.s3.amazonaws.com/58d428743111af1d0a20cf28/58d49a9b92bf98c9ee5aa2d0/1e0688bd337527ae8e157fb48e4b7c60/capture.png)
+![](https://trello-attachments.s3.amazonaws.com/58d428743111af1d0a20cf28/58d49e6d363fb61d32be7235/ae1db9043ad8c4131f410ed71eef9ce4/capture.png)
 
 ![](https://trello-attachments.s3.amazonaws.com/58d428743111af1d0a20cf28/58d499f720e1dc0d6cb1cb6e/1345cf7d17807334d760c0f7d6e9f736/capture.png)
 
