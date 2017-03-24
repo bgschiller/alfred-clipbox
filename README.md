@@ -4,11 +4,17 @@ Take screenshots and video capture and upload to Trello. Put the link on your cl
 
 ## Default Keybindings
 
-| Keys            | Action                   |
-| --------------- | ------------------------ |
-| &#8984;&#8679;X | Take screenshot          |
-| &#8984;&#8679;G | Begin screen recording   |
-| &#8984;&#8679;C | Upload clipboard text    |
+| Keys            | Action                           |
+| --------------- | -------------------------------- |
+| &#8984;&#8679;X | Take screenshot                  |
+| &#8984;&#8679;G | Begin screen recording           |
+| &#8984;&#8679;C | Upload clipboard text or file    |
+
+## Setup
+
+You'll need to have ffmpeg installed, with libvpx in order to do screen recordings. It needs to be available at `/usr/bin/local/ffmpeg/`, as I had to use the full path for some reason. You can get it with `brew install ffmpeg --with-libvpx`.
+
+You'll also need to have the python requests library. You can get that with `sudo pip install requests`.
 
 ## Logging in to Trello
 
