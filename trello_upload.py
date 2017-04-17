@@ -78,10 +78,10 @@ class ScreenshotStorage(object):
         """
         todays_list_name = datetime.datetime.now().strftime('%B %Y')
         if self._today_list['name'] != todays_list_name:
-            list_details = {'id': list_id, 'name': todays_list_name}
+            list_details = self.get_todays_list_id()
             write_to_file(list_details, '~/.clipbox/list_details')
 
-            self._today_list = self.create_list(todays_list_name)
+            self._today_list = list_details
         return self._today_list['id']
 
 
@@ -90,7 +90,7 @@ class ScreenshotStorage(object):
             'name': name,
             'idBoard': self._board_id,
         }).json()
-        list_details = {'id': list_id, 'name': name}
+        list_details = {'id': resp['id'], 'name': name}
         write_to_file(list_details, '~/.clipbox/list_details')
 
         return list_details
