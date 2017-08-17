@@ -568,10 +568,6 @@
 		<key>trello_api_key</key>
 		<string>5e67ba4567706cf6c45e14a8091f4cfc</string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>trello_api_key</string>
-	</array>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
