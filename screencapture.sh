@@ -6,5 +6,5 @@ elif [[ $1 == "clipboard" ]]
 		osascript clip_text_or_file.applescript
 elif [[ $1 == "recording" ]]
 	then
-		osascript screen_recording.applescript && /usr/local/bin/ffmpeg -y -i ~/.clipbox/recording.mov -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis ~/.clipbox/recording.webm && echo ~/.clipbox/recording.webm
+		osascript screen_recording.applescript && ffmpeg -y -i ~/.clipbox/recording.mov -c copy -map 0 -movflags +faststart ~/.clipbox/recording.mp4 && echo ~/.clipbox/recording.mp4
 fi
