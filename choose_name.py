@@ -1,12 +1,9 @@
-import sys
+from __future__ import print_function
 import os
-import boto3
+import sys
 import random
 import string
 import datetime
-import mimetypes
-
-s3 = boto3.client('s3')
 
 def rewrite_name(fname):
     """
@@ -26,18 +23,10 @@ def random_key(filename):
     date = str(datetime.datetime.now())[:10]
     return rewrite_name('{}-{}-{}'.format(prefix, date, tail))
 
-bucket_name = os.getenv('AWS_S3_BUCKET')
 url_prefix = os.getenv('URL_PREFIX')
 
 if __name__ == '__main__':
     file_name = sys.argv[1]
-    obj_key = sys.argv[2]
-    mtype, encoding = mimetypes.guess_type(file_name)
-    s3.upload_file(
-            file_name, bucket_name, obj_key,
-            ExtraArgs={
-                'ACL': 'public-read',
-                'ContentType': mtype,
-            })
+    obj_key = random_key(file_name)
     url = url_prefix + obj_key
-    sys.stdout.write(url)
+    print(file_name, obj_key, url)
